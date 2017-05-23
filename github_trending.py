@@ -17,7 +17,7 @@ def get_open_issues_amount(repo_owner, repo_name):
 
 
 if __name__ == '__main__':
-    list_top_github_repo = get_trending_repositories(10)
+    list_top_github_repo = get_trending_repositories(20)
     for repo in list_top_github_repo:
         print('Name: {}'.format(repo['name']))
         print('Stars: {}'.format(repo['stargazers_count']))
