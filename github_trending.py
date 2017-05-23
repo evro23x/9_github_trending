@@ -2,18 +2,18 @@ import requests
 from datetime import datetime, timedelta
 
 
-def get_trending_repositories(top_size):
+def get_trending_repositories(count):
     url = 'https://api.github.com/search/repositories'
     prepare_date = 'created:>={}'.format((datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d'))
-    payload = {'sort': 'stars', 'q': prepare_date, 'order': 'desc', 'per_page': top_size, 'page': '1'}
-    r = requests.get(url, params=payload)
-    return r.json()['items']
+    payload = {'sort': 'stars', 'q': prepare_date, 'order': 'desc', 'per_page': count, 'page': '1'}
+    result = requests.get(url, params=payload)
+    return result.json()['items']
 
 
 def get_open_issues_amount(repo_owner, repo_name):
     url = 'https://api.github.com/repos/{}/{}/issues'.format(repo_owner, repo_name)
-    r = requests.get(url)
-    return len(r.json())
+    result = requests.get(url)
+    return len(result.json())
 
 
 if __name__ == '__main__':
