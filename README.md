@@ -1,8 +1,8 @@
-# Github Trends
+# Тренды проекта Github
 
 Cкрипт находит все репозитории на GitHub, созданные за последнюю неделю, выбирает 20 с наибольшим количеством звёзд и для каждого считает количество открытых issues. Затем выповодит их вместе со ссылками в консоль.
 
-# Quickstart
+# Быстрый старт
 
 Пример запуска скрипта в среде Linux, под Python 3.5:
 
@@ -10,11 +10,11 @@ Cкрипт находит все репозитории на GitHub, созда
 $ python github_trending.py
 ```
 
-# Example
+# Пример запуска
 
 ```#!bash
 
-$ python password_strength.py
+$ python github_trending.py
 Name: preact-cli
 Stars: 1032
 Issues: 30
@@ -66,6 +66,6 @@ Issues: 2
 Link: https://api.github.com/repos/mapbox/delaunator
 ```
 
-# Project Goals
+# Цель проекта 
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+Код написан в целях обучения в рамках курса для веб-разработчиков - [DEVMAN.org](https://devman.org)
